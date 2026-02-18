@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark App
 
-## Getting Started
+A full‑stack web application that allows users to securely log in, manage bookmarks, and see real‑time updates. Built with **Next.js**, **Supabase**, and deployed on **Vercel**.
 
-First, run the development server:
+## 🚀 Live Demo
+Production URL: [https://smart-bookmark-app-8v8a.vercel.app](https://smart-bookmark-app-8v8a.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** Supabase (Authentication + Database)
+- **Deployment:** Vercel
+- **Version Control:** GitHub
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
+## 🔑 Features
+- Google OAuth login with Supabase
+- Secure authentication and user privacy
+- CRUD operations for bookmarks (Add, Edit, Delete)
+- Real‑time updates using Supabase subscriptions
+- Responsive UI with icons, transitions, and polished design
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
+## ⚡ Challenges & Solutions
+### 1. Authentication Redirects
+- **Problem:** After Google login, users were redirected to `localhost:3000` even in production.
+- **Solution:** Added both `http://localhost:3000` and `https://smart-bookmark-app-8v8a.vercel.app` to Supabase **Redirect URLs** and updated the **Site URL** to the Vercel domain.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Environment Variables
+- **Problem:** Supabase keys were not loading correctly in production.
+- **Solution:** Configured `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel environment variables and redeployed.
 
-## Learn More
+### 3. UI/UX Polish
+- **Problem:** Basic UI felt unfinished.
+- **Solution:** Added Tailwind styling, icons, transitions, and responsive layouts for a professional look.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📖 How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/usha-rani-nare/smart-bookmark-app.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Install dependencies:
+  npm install
+-  Add environment variables in .env.local:
+    NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+- Run the development server:
+    npm run dev
+- Open http://localhost:3000 (localh- localhost in Bing) in your browser.
 
-## Deploy on Vercel
+📹 Video Walkthrough
+[https://www.loom.com/share/637cc1852f4a4330b302b6c303541b79]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🙌 Acknowledgements
+- Supabase for authentication and database
+- Vercel for seamless deployment
+- Tailwind CSS for styling
+- Microsoft Copilot for stepwise debugging and deployment guidance
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+✅ This README hits all the required points: live URL, tech stack, features, problems solved, and instructions.  
+
+
+
